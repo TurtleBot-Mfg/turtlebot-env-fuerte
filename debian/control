@@ -1,0 +1,14 @@
+Source: turtlebot-env
+Section: science
+Priority: extra
+Essential: yes
+Maintainer: I Heart Engineering <code@iheartengineering.com>
+Build-Depends: debhelper (>= 5), config-package-dev (>= 4.5~)
+Standards-Version: 3.7.2
+
+Package: turtlebot-env
+Essential: yes
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, chrony, gdb, subversion, mercurial, git-core, openssh-server, turtlebot-ros
+Description: TurtleBot system envronment
+Conflicts: ${diverted-files}

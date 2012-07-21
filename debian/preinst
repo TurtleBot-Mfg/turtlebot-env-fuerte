@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ "$1" = install ]; then
+    # divert /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.power.gschema.xml
+    dpkg-divert --package turtlebot-env-fuerte --add --rename \
+        --divert /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.power.gschema.xml.real /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.power.gschema.xml
+fi

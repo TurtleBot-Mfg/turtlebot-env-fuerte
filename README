@@ -1,0 +1,14 @@
+This package configures the Ubuntu environment for operation as a TurtleBot.
+The files in this package should work with any recent version of ROS.
+
+root/usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.power.gschema.xml
+  Change power settings to prevent the laptop from entering suspend/hibernate when lid is closed.
+
+root/etc/bluetooth/main.conf.turtlebot-env
+  ?
+
+root/etc/init.d/ps3joy
+  starts instance of pd3joy.py
+
+root/etc/modprobe.d/blacklist-kinect.conf
+  Disables Kinect kernel driver to avoid conflict with OpenNI userland driver

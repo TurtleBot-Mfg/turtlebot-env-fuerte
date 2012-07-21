@@ -1,0 +1,16 @@
+#!/bin/sh
+
+case "$1" in 
+  purge)
+    # TODO: double-check this to make sure nothing's missing
+    update-rc.d ps3joy remove
+    grep -v '. /etc/ros/setup.bash' /etc/skel/.bashrc > /etc/skel/.bashrc
+
+    ;;
+
+
+    *)
+    ;;
+esac
+
+#DEBHELPER#

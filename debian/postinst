@@ -1,0 +1,36 @@
+#!/bin/sh
+set -e
+
+PKG=turtlebot-env-fuerte
+
+#DEBHELPER#
+
+case "$1" in
+  configure)
+
+    # set up turtlebot daemon user
+    #USER=turtlebot-daemon
+    #id $USER >/dev/null 2>&1 || adduser $USER --disabled-password -quiet --gecos "" || :
+    #usermod -a -G admin $USER
+
+    if [ -e /etc/init.d/ps3joy ]; then
+      update-rc.d -f ps3joy remove
+      update-rc.d ps3joy start 26 2 3 4 5 . stop 74 0 1 6 .
+      invoke-rc.d ps3joy start || true
+    fi
+
+    # create ros directories
+    mkdir -p /etc/skel/ros
+    # Should already be created
+    #mkdir -p /etc/ros
+
+    # all new users source ros on startup
+    grep '. /etc/ros/setup.bash' /etc/skel/.bashrc >/dev/null 2>&1 || echo ". /etc/ros/setup.bash" >> /etc/skel/.bashrc
+
+    ;;
+
+  *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 0
+    ;;
+esac

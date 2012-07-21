@@ -1,0 +1,7 @@
+turtlebot-env (0.0.1) UNRELEASED; urgency=low
+
+  * reinit repo to support git-dch
+
+ -- I Heart Engineering <code@iheartengineering.com>  Mon, 09 Jul 2012 09:26:28 +0000
+
+

@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+#export DH_ALWAYS_EXCLUDE=CVS:.svn
+
+DEB_DIVERT_EXTENSION = .turtlebot-dev
+DEB_DIVERT_FILES_pr2-environment += \
+	/etc/bluetooth/main.conf.turblebot-dev
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/config-package.mk

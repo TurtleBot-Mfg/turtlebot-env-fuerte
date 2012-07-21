@@ -1,0 +1,7 @@
+# Turtlebot FTDI rules
+SUBSYSTEMS=="usb", ENV{ID_MODEL}=="", IMPORT{program}="usb_id --export %p"
+SUBSYSTEMS=="usb", ENV{ID_MODEL_FROM_DATABASE}=="", IMPORT{program}="usb-db %p"
+SUBSYSTEMS=="usb", ATTRS{idVendor}!="", ATTRS{idProduct}!="", ENV{ID_VENDOR_ID}="$attr{idVendor}", ENV{ID_MODEL_ID}="$attr
+{idProduct}"
+
+ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE="664", OWNER="turtlebot", GROUP="turtlebot"
