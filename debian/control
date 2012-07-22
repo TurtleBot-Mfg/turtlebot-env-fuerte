@@ -1,10 +1,9 @@
 Source: turtlebot-env
 Section: science
 Priority: extra
-Essential: yes
 Maintainer: I Heart Engineering <code@iheartengineering.com>
-Build-Depends: debhelper (>= 5), config-package-dev (>= 4.5~)
-Standards-Version: 3.7.2
+Build-Depends: debhelper (>= 5), config-package-dev (>= 4.5~), cdbs
+Standards-Version: 3.9.3
 
 Package: turtlebot-env
 Essential: yes

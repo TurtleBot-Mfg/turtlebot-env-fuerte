@@ -1,6 +1,8 @@
 #!/bin/sh
 
 if [ "$1" = remove ]; then
-    dpkg-divert --package turtlebot-env-fuerte --remove --rename \
+    dpkg-divert --package turtlebot-env --remove --rename \
         --divert /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.power.gschema.xml.real /usr/share/glib-2.0/schemas/org.gnome.settings-daemon.plugins.power.gschema.xml
 fi
+
+#DEBHELPER#
