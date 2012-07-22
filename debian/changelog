@@ -1,3 +1,9 @@
+turtlebot-env (0.0.2) precise; urgency=low
+
+  * Fixed divert after pkg name change, changes to pass lintian
+
+ -- I Heart Engineering <code@iheartengineering.com>  Sat, 21 Jul 2012 21:44:04 -0400
+
 turtlebot-env (0.0.1) UNRELEASED; urgency=low
 
   * reinit repo to support git-dch
