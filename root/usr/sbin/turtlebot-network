@@ -5,7 +5,7 @@ import socket
 import struct
 import os
 
-if len(sys.argv) != 2 or (sys.argv[1] != "interface" and sys.argv[1] != "ip") :
+if len(sys.argv) != 2 or (sys.argv[1] != "interface" and sys.argv[1] != "ip" and sys.argv[1] != "ssid") :
     print "Usage: %s ip"%sys.argv[0]
     print "       %s interface"%sys.argv[0]
     sys.exit(0)
@@ -57,6 +57,14 @@ for conn in active:
             ip4_iaddress = ip4_props.Get("org.freedesktop.NetworkManager.IP4Config", "Addresses")[0][0]
             ip4_paddress = struct.pack('!I',socket.htonl(ip4_iaddress))
             print socket.inet_ntoa(ip4_paddress)
+            sys.exit(0)
+
+        elif command == "ssid":
+            ap_path = dev_props.Get("org.freedesktop.NetworkManager.Device.Wireless", "ActiveAccessPoint")
+            ap_proxy = bus.get_object("org.freedesktop.NetworkManager", ap_path)
+            ap_props = dbus.Interface(ap_proxy, "org.freedesktop.DBus.Properties")
+            ssid = ap_props.Get("org.freedesktop.NetworkManager.AccessPoint","Ssid", byte_arrays=True)
+            print ssid
             sys.exit(0)
     
 if command == "interface":
