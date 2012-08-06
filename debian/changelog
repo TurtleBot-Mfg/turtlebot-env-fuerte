@@ -1,3 +1,11 @@
+turtlebot-env (0.0.3~1.gbpf49424) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @f49424321f1c5fae9864bd10825a0244c01fe978 **
+
+  * Now supports querying the SSID from NetworkManager
+
+ -- I Heart Engineering <code@iheartengineering.com>  Sat, 04 Aug 2012 23:48:40 -0400
+
 turtlebot-env (0.0.2) precise; urgency=low
 
   * Fixed divert after pkg name change, changes to pass lintian
