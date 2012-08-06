@@ -16,7 +16,7 @@ case "$1" in
     if [ -e /etc/init.d/ps3joy ]; then
       update-rc.d -f ps3joy remove
       update-rc.d ps3joy start 26 2 3 4 5 . stop 74 0 1 6 .
-      invoke-rc.d ps3joy start || true
+      invoke-rc.d ps3joy restart || true
     fi
 
     # create ros directories

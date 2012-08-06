@@ -1,3 +1,11 @@
+turtlebot-env (0.0.3~1.gbp559066) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @55906660c1726f9fd9a5549dc87e32de6fc3858b **
+
+  * UNRELEASED
+
+ -- I Heart Engineering <code@iheartengineering.com>  Sun, 05 Aug 2012 21:23:54 -0400
+
 turtlebot-env (0.0.3~1.gbpf49424) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @f49424321f1c5fae9864bd10825a0244c01fe978 **
