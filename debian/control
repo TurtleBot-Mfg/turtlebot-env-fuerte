@@ -8,6 +8,6 @@ Standards-Version: 3.9.3
 Package: turtlebot-env
 Essential: yes
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, chrony, gdb, subversion, mercurial, git-core, openssh-server, turtlebot-ros
+Depends: ${shlibs:Depends}, ${misc:Depends}, chrony, openssh-server, udev, turtlebot-ros
 Description: TurtleBot system envronment
 Conflicts: ${diverted-files}
