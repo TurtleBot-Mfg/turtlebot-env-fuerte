@@ -1,3 +1,26 @@
+turtlebot-env (0.0.3) precise; urgency=low
+
+  * add notification support and upstart changes to attempt to fix #3
+  * hack for #4, now it appears to start twice
+
+ -- I Heart Engineering <code@iheartengineering.com>  Wed, 15 Aug 2012 08:11:30 -0400
+
+turtlebot-env (0.0.3~1.gbp9d65c6) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @9d65c68a9500fcda09aaef20b3f8654799a2a1b3 **
+
+  * add dep on udev
+
+ -- I Heart Engineering <code@iheartengineering.com>  Sun, 12 Aug 2012 23:56:30 -0400
+
+turtlebot-env (0.0.3~1.gbpd2a5da) UNRELEASED; urgency=low
+
+  ** SNAPSHOT build @d2a5da4ff57742584fadf7c678a478df4a3c29bd **
+
+  * restart ps3joy instead of starting in case it is already installed.
+
+ -- I Heart Engineering <code@iheartengineering.com>  Sun, 05 Aug 2012 21:31:39 -0400
+
 turtlebot-env (0.0.3~1.gbp559066) UNRELEASED; urgency=low
 
   ** SNAPSHOT build @55906660c1726f9fd9a5549dc87e32de6fc3858b **
